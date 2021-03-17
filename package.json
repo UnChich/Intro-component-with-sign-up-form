@@ -1,0 +1,22 @@
+{
+  "name": "intro-component-with-signup-form-master",
+  "version": "1.0.0",
+  "description": "Intro Component with Sign Up Form",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UnChich/Intro-component-with-sign-up-form.git"
+  },
+  "author": "Richie Jaimes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UnChich/Intro-component-with-sign-up-form/issues"
+  },
+  "homepage": "https://github.com/UnChich/Intro-component-with-sign-up-form#readme",
+  "dependencies": {
+    "bootstrap": "^4.6.0"
+  }
+}
