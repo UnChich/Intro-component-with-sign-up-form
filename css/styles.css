@@ -1,0 +1,17 @@
+body {
+  background: #ff7979;
+}
+
+/* background image does not currently fill entire length of mobile view, but issue should be resolved when more content is added to the page */
+.content {
+  background: url(/images/bg-intro-mobile.png);
+  background-size: cover;
+}
+
+@media (min-width: 576px) {
+  .content {
+    background: url(/images/bg-intro-desktop.png);
+    background-size: cover;
+    height: 100vh;
+  }
+}
