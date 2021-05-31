@@ -1,17 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 body {
   background: #ff7979;
+  font-family: "Poppins", sans-serif;
 }
 
+/* Background */
 /* background image does not currently fill entire length of mobile view, but issue should be resolved when more content is added to the page */
-.content {
+#content {
   background: url(/images/bg-intro-mobile.png);
   background-size: cover;
 }
 
 @media (min-width: 576px) {
-  .content {
+  #content {
     background: url(/images/bg-intro-desktop.png);
     background-size: cover;
     height: 100vh;
+  }
+}
+
+/* First Section */
+
+#descriptionGroup {
+  color: #fff;
+  max-width: 90%;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 2.25rem;
+  margin-bottom: 1.4rem;
+}
+
+#descriptionGroup p {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  font-weight: 400;
+}
+
+/* Second Section */
+
+#formGroup {
+  width: 90vw;
+  margin-bottom: 3rem;
+}
+
+#trialButton {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9375rem;
+  background: #5e54a4;
+  color: #fff;
+  box-shadow: 2px 6px 5px rgba(0, 0, 0, 0.4);
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+#trialButton span {
+  font-weight: 200;
+}
+
+#trialButton span::before {
+  content: "\a";
+  white-space: pre;
+}
+
+#submitButton {
+  background: #38cc8b;
+  color: #fff;
+  font-size: 0.9375rem;
+  box-shadow: 2px 6px 5px rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+
+#tos {
+  font-size: 0.6875rem;
+  color: #bab7d4;
+}
+
+#tos span {
+  color: #ff7979;
+  font-weight: 700;
+}
+
+form {
+  background: #fff;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 2px 6px 5px rgba(0, 0, 0, 0.4);
+}
+
+.form-control {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #3d3b48;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 576px) {
+  #trialButton span::before {
+    content: "";
+    white-space: normal;
+  }
+}
+
+@media (min-width: 992px) {
+  #firstSection {
+    height: 100vh;
+  }
+
+  #descriptionGroup {
+    max-width: 35vw;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  h1 {
+    font-size: 3.125rem;
+    line-height: 3.4375rem;
+    text-align: left;
+  }
+
+  #descriptionGroup p {
+    text-align: left;
+  }
+
+  #formGroup {
+    width: 37.5vw;
+  }
+
+  #trialButton {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  #submitButton {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  form {
+    padding: 48px;
+  }
+
+  .form-control {
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
   }
 }

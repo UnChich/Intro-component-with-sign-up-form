@@ -17,6 +17,14 @@
     />
     <link rel="stylesheet" href="/css/styles.css" />
 
+    <script src="/node_modules/jquery/dist/jquery.min.js" defer></script>
+    <script src="/node_modules/popper.js/dist/popper.min.js" defer></script>
+    <script
+      src="/node_modules/bootstrap/dist/js/bootstrap.min.js"
+      defer
+    ></script>
+    <script src="/js/script.js" defer></script>
+
     <title>Frontend Mentor | Intro component with sign up form</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -26,30 +34,100 @@
   </style> -->
   </head>
   <body>
-    <div class="content container-fluid">
-      <div class="row">
-        <!-- This section will take up half the page on desk top view and full width on mobile view -->
-        <div class="col-12 col-sm-6">
-          Learn to code by watching others See how experienced developers solve
-          problems in real-time. Watching scripted tutorials is great, but
-          understanding how developers think is invaluable. Try it free 7 days
-          then $20/mo. thereafter First Name Last Name Email Address Password
-          Claim your free trial By clicking the button, you are agreeing to our
-          Terms and Services
+    <div id="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Left page Content -->
+          <div
+            id="firstSection"
+            class="
+              col-12 col-lg-6
+              d-flex
+              justify-content-center
+              align-items-center
+            "
+          >
+            <div id="descriptionGroup" class="text-center">
+              <h1>Learn to code by watching others</h1>
+              <p>
+                See how experienced developers solve problems in real-time.
+                Watching scripted tutorials is great, but understanding how
+                developers think is invaluable.
+              </p>
+            </div>
+          </div>
+          <!-- Form/Right side of form -->
+          <div
+            id="secondSection"
+            class="
+              col-12 col-lg-6
+              d-flex
+              justify-content-center
+              align-items-center
+            "
+          >
+            <div id="formGroup" class="row d-flex justify-content-center">
+              <div class="col-12 d-flex justify-content-center">
+                <button id="trialButton" type="button" class="btn btn-lg">
+                  Try it free 7 days <span>then $20/mo. thereafter</span>
+                </button>
+              </div>
+              <div class="col-12">
+                <form>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="First Name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Last Name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      class="form-control form-control-lg"
+                      id="inputEmail"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      class="form-control form-control-lg"
+                      id="inputPassword"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div class="form-group text-center">
+                    <button id="submitButton" type="button" class="btn btn-lg">
+                      Claim Your Free Trial
+                    </button>
+                  </div>
+                  <div class="form-group">
+                    <div id="tos" class="text-center">
+                      By clicking the button you are agreeing to our
+                      <span>Terms and Services</span>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- This section will be for the form -->
-        <div class="col-12 col-sm-6"></div>
-      </div>
-      <!-- <footer>
+
+        <!-- <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer> -->
+      </div>
     </div>
-    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="/node_modules/popper.js/dist/popper.min.js"></script>
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/js/script.js"></script>
   </body>
 </html>
