@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/UnChich/Intro-component-with-sign-up-form#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "bootstrap": "^4.6.0"
   }
 }
