@@ -60,17 +60,28 @@ function js() {
 
 // html
 function html() {
-  var target = src("./*html");
-  var sources = src(["./dist/js/*.js", "./dist/css/*.css"], { read: false });
-  var transform = function (filepath) {
+  var target = src("./index.html");
+  var jsSource = src("./dist/js/*.js", { read: false });
+  var cssSource = src("./dist/css/*.css", { read: false });
+
+  var transformjs = function (filepath) {
     if (filepath.slice(-3) === ".js") {
+      filepath = "/js/scripts.js";
       return '<script src= "' + filepath + '" defer></script>';
+    }
+    return inject.transform.apply(inject.transform, arguments);
+  };
+  var transformcss = function (filepath) {
+    if (filepath.slice(-4) === ".css") {
+      filepath = "/css/styles.css";
+      return '<link rel="stylesheet" href="' + filepath + '" />';
     }
     return inject.transform.apply(inject.transform, arguments);
   };
   return target
     .pipe(plumber())
-    .pipe(inject(sources, { transform: transform }))
+    .pipe(inject(jsSource, { transform: transformjs }))
+    .pipe(inject(cssSource, { transform: transformcss }))
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(dest("./dist"));
 }
