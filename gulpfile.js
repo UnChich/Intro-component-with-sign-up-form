@@ -13,7 +13,7 @@ const concat = require("gulp-concat");
 const inject = require("gulp-inject");
 
 // distribution folder file names
-var cssFile = "stlye.css";
+var cssFile = "styles.css";
 var jsFile = "scripts.js";
 
 // browsersync
