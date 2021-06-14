@@ -66,14 +66,14 @@ function html() {
 
   var transformjs = function (filepath) {
     if (filepath.slice(-3) === ".js") {
-      filepath = "/js/scripts.js";
+      filepath = "js/scripts.js";
       return '<script src= "' + filepath + '" defer></script>';
     }
     return inject.transform.apply(inject.transform, arguments);
   };
   var transformcss = function (filepath) {
     if (filepath.slice(-4) === ".css") {
-      filepath = "/css/styles.css";
+      filepath = "css/styles.css";
       return '<link rel="stylesheet" href="' + filepath + '" />';
     }
     return inject.transform.apply(inject.transform, arguments);
