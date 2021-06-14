@@ -8,13 +8,13 @@ body {
 /* Background */
 /* background image does not currently fill entire length of mobile view, but issue should be resolved when more content is added to the page */
 #content {
-  background: url(/images/bg-intro-mobile.png);
+  background: url(../images/bg-intro-mobile.png);
   background-size: cover;
 }
 
 @media (min-width: 576px) {
   #content {
-    background: url(/images/bg-intro-desktop.png);
+    background: url(../images/bg-intro-desktop.png);
     background-size: cover;
     height: 100vh;
   }
@@ -114,7 +114,7 @@ form {
 .errored {
   border-color: #ff7979;
   border-width: 2px;
-  background-image: url(/images/icon-error.svg);
+  background-image: url(../images/icon-error.svg);
   background-repeat: no-repeat;
   background-position: right calc(0.375em + 0.1875rem) center;
   background-size: calc(1em + 0.625rem) calc(1em + 0.625rem);
